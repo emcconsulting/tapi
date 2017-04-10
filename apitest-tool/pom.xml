@@ -35,6 +35,8 @@
 		<module>execution/execution-repository</module>
 		<module>execution/execution-service</module>
 		<module>execution/execution-controller</module>
+		<module>testcase-ui</module>
+		
 		
 		
 	</modules>

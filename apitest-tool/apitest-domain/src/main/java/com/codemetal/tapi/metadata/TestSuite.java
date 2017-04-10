@@ -1,6 +1,10 @@
 package com.codemetal.tapi.metadata;
 
 import java.io.Serializable;
+
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+
 import org.springframework.data.annotation.Id;
 
 /**
@@ -14,6 +18,7 @@ public class TestSuite implements Serializable{
 	
 	/*Mongodb id for the TestSuite*/
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
     public String id;
 	
 	/*Name of the TestSuite*/

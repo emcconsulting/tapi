@@ -6,7 +6,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import scala.annotation.strictfp;
+
 
 /**
  * This class represents a TestCase which will be executed as a JUnit testcase

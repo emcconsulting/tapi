@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.codemetal.tapi.metadata.TestCaseDetails;
 import com.codemetal.tapi.metadata.repository.TestCaseRepository;
-
+import com.codemetal.tapi.metadata.service.TestCaseService;
 /**
  * 
  * @author santhosh
@@ -37,7 +37,10 @@ public class TestCaseServiceImpl implements TestCaseService{
 
 	@Override
 	public List<TestCaseDetails> getTestCases() {
-		return testCaseRepository.findAll();
+		
+		//testCaseRepository.findAll().forEachRemaining(list::add); 
+
+		return null;
 	}
 
 }

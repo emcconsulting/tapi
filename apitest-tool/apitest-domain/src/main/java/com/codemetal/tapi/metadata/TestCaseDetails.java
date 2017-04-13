@@ -24,21 +24,7 @@ public class TestCaseDetails implements Serializable {
 	/* Id of the testsuite to which this testcase belongs */
 	public String testSuiteId;
 
-	public String getId() {
-		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
-	}
-
-	public String getTestSuiteId() {
-		return testSuiteId;
-	}
-
-	public void setTestSuiteId(String testSuiteId) {
-		this.testSuiteId = testSuiteId;
-	}
+	
 
 	/* Scenario Name for the TestCase */
 	private String scenarioName;
@@ -177,6 +163,22 @@ public class TestCaseDetails implements Serializable {
 
 	public void setEndPointPort(int endPointPort) {
 		this.endPointPort = endPointPort;
+	}
+	
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getTestSuiteId() {
+		return testSuiteId;
+	}
+
+	public void setTestSuiteId(String testSuiteId) {
+		this.testSuiteId = testSuiteId;
 	}
 
 }

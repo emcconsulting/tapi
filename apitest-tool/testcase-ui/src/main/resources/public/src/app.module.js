@@ -6,19 +6,25 @@ angular.module('app.tapi', []);
 
 myapp.config(function($stateProvider, $urlRouterProvider) {
 
-    $urlRouterProvider.otherwise('/createTestSuite');
+    $urlRouterProvider.otherwise('/viewTestSuiteList');
     $stateProvider
 
         .state('login', {
             //  Posts state. This state will contain nested views
-            url: '/createTestSuite',
-            templateUrl: 'src/modules/views/createTestSuite.html'
+            url: '/viewTestSuiteList',
+            templateUrl: 'src/modules/views/viewTestSuiteList.html'
         })
-        .state('createTestSuite', {
+        .state('viewTestSuite', {
             //  Posts state. This state will contain nested views
-            url: '/createForm',
-            templateUrl: 'src/modules/views/createTestSuite.html'
-        });
+            url: '/viewTestSuite',
+            templateUrl: 'src/modules/views/viewTestSuiteList.html'
+        })
+	    .state('createTestSuite', {
+	        //  Posts state. This state will contain nested views
+	        url: '/createTestSuite',
+	        templateUrl: 'src/modules/views/createTestSuite.html'
+	    });
+
 
 
 });

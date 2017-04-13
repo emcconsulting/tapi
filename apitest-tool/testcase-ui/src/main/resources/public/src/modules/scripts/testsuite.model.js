@@ -32,8 +32,7 @@
         
         model.newTestSuiteModel = function () {
         	return {
-        		"name": "",
-        		"id": ""
+        		"name": ""
         	}
         }
 

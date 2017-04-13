@@ -38,8 +38,7 @@ public class TestSuiteServiceImpl implements TestSuiteService{
 
 	@Override
 	public List<TestSuite> getTestSuites() {
-		//return testSuiteRepository.findAll();
-		return null;
+		return (List<TestSuite>)testSuiteRepository.findAll();
 	}
 
 	@Override

@@ -6,12 +6,24 @@
 (function () {
     angular.module('app.tapi').controller('TestSuiteController',TestSuiteController);
 
-    function TestSuiteController($scope,ProfileBasicModel,ProfileBasicFactory,$sessionStorage){
+    function TestSuiteController($scope,ProfileBasicModel,ProfileBasicFactory,$sessionStorage,$state){
 
         init();
 
         function init() {
             initModels();
+           
+            	$scope.testSuitesList = [];
+            	
+            	ProfileBasicFactory.getAllTestSuites().then(success,error);
+            	function success(response) {
+            		$scope.testSuitesList = response.data;
+                }
+                function error(response) {
+                	
+                }
+                
+            
         }
 
         function initModels() {
@@ -45,15 +57,20 @@
         };
         
         $scope.createTestSuite = function () {
+            $state.go('createTestSuite');
             
-            $scope.testSuiteModel.name = $scope.name;
-            ProfileBasicFactory.createTestSuiteData($scope.testSuiteModel).then(success, error);
-            function success(response) {
-            	reset();
-            }
-            function error(response) {
-            	reset();
-            }
+        };
+        
+        $scope.saveTestSuite = function () {
+        	 $scope.testSuiteModel.name = $scope.name;
+             ProfileBasicFactory.createTestSuiteData($scope.testSuiteModel).then(success, error);
+             function success(response) {
+             	reset();
+             	$state.go('viewTestSuite')
+             }
+             function error(response) {
+             	reset();
+             }
             
             
         };
@@ -63,6 +80,7 @@
        
         
         $scope.testSuiteList = function () {
+        	$state.go('viewTestSuite');
         	$scope.testSuitesList = [];
         	
         	
@@ -94,7 +112,7 @@
 
         
     }
-    TestSuiteController.$inject = ['$scope','ProfileBasicModel','ProfileBasicFactory','$sessionStorage'];
+    TestSuiteController.$inject = ['$scope','ProfileBasicModel','ProfileBasicFactory','$sessionStorage','$state'];
 
 })();
 

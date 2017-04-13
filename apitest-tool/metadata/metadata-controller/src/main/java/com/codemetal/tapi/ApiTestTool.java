@@ -11,10 +11,14 @@ import com.codemetal.tapi.metadata.service.TestSuiteService;
 import com.codemetal.tapi.metadata.service.TestSuiteServiceImpl;
 
 
-@SpringBootApplication(scanBasePackageClasses= 
-{TestCaseRepository.class,TestSuiteRepository.class,
-		TestCaseServiceImpl.class,TestSuiteServiceImpl.class
-		})
+@SpringBootApplication(scanBasePackages= {
+        "com.codemetal.tapi.metadata.controller",
+        "com.codemetal.tapi.metadata.service",
+        "com.codemetal.tapi.metadata.repository"
+}
+
+        )
+
 
 @EnableMongoRepositories(basePackageClasses = {TestCaseRepository.class,TestSuiteRepository.class})
 public class ApiTestTool {

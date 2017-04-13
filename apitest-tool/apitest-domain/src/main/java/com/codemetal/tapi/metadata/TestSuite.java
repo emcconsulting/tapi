@@ -1,6 +1,7 @@
 package com.codemetal.tapi.metadata;
 
 import java.io.Serializable;
+
 import org.springframework.data.annotation.Id;
 
 /**

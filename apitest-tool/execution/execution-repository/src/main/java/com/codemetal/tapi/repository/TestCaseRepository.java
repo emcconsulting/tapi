@@ -1,17 +1,15 @@
 package com.codemetal.tapi.repository;
 
-import java.util.List;
-
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.repository.PagingAndSortingRepository;
+import org.springframework.stereotype.Repository;
 
 import com.codemetal.tapi.metadata.TestCaseDetails;
-import com.codemetal.tapi.metadata.TestSuite;
 
+@Repository
+public interface TestCaseRepository extends PagingAndSortingRepository<TestCaseDetails, Long> {
 
-public interface TestCaseRepository extends PagingAndSortingRepository<TestCaseDetails,Long> {
+	Page<TestCaseDetails> findByTestSuiteId(String id, Pageable pageable);
 
-	Page<TestCaseDetails> findByTestSuiteId(String id,Pageable pageable);
-	
 }

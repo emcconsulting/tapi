@@ -38,6 +38,12 @@
 		<module>execution/execution-controller</module>
 
 		<module>testcase-ui</module>
+		
+		<module>data-mysql</module>
+		<module>data-mysql/data-mysql-domain</module>
+		<module>data-mysql/data-mysql-repository</module>
+		<module>data-mysql/data-mysql-service</module>
+		<module>data-mysql/data-mysql-controller</module>
 
 		
 		

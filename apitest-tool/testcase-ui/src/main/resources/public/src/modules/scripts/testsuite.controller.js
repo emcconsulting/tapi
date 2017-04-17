@@ -23,18 +23,26 @@
                 	
                 }
                 
+                
+                $scope.testCasesList = [];
+            	
+            	
+            	ProfileBasicFactory.getAllTestCases().then(success,error);
+            	function success(response) {
+            		$scope.testCasesList = response.data;
+                }
+                function error(response) {
+                	
+                }
+                
             
         }
 
         function initModels() {
-            /*console.log("Session user Id"+ $sessionStorage.userId);
-            $scope.userId = $sessionStorage.userId;
-            $scope.profileBasicModel = ProfileBasicModel.newProfileBasicModel();
-            getBasicModel();*/
-        	
+            
         	$scope.testSuiteModel = ProfileBasicModel.newTestSuiteModel();
         	$scope.testSuiteList = ProfileBasicModel.newTestSuiteModel();
-        	
+        	$scope.testCaseModel = ProfileBasicModel.newTestCaseModel();
         }
         function reset() {
         	$scope.name = "";
@@ -61,12 +69,16 @@
             
         };
         
+        $scope.createTestCase = function () {
+        	$state.go('createTestCase');
+        }
+        
         $scope.saveTestSuite = function () {
         	 $scope.testSuiteModel.name = $scope.name;
              ProfileBasicFactory.createTestSuiteData($scope.testSuiteModel).then(success, error);
              function success(response) {
              	reset();
-             	$state.go('viewTestSuite')
+             	$state.go('viewTestSuite');
              }
              function error(response) {
              	reset();
@@ -74,6 +86,20 @@
             
             
         };
+        
+        $scope.saveTestCase = function () {
+       	 $scope.testCaseModel.scenarioName = $scope.name;
+            ProfileBasicFactory.createTestCaseData($scope.testCaseModel).then(success, error);
+            function success(response) {
+            	reset();
+            	$state.go('viewTestCase');
+            }
+            function error(response) {
+            	reset();
+            }
+           
+           
+       };
         
         
         
@@ -87,6 +113,22 @@
         	ProfileBasicFactory.getAllTestSuites().then(success,error);
         	function success(response) {
         		$scope.testSuitesList = response.data;
+            }
+            function error(response) {
+            	
+            }
+            
+        }
+        
+        $scope.testCaseList = function () {
+        	
+        	$scope.testCasesList = [];
+        	
+        	
+        	ProfileBasicFactory.getAllTestCases().then(success,error);
+        	function success(response) {
+        		$scope.testCasesList = response.data;
+        		$state.go('viewTestCase');
             }
             function error(response) {
             	

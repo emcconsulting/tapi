@@ -19,6 +19,7 @@
         constant.CONN_APP_URL_BASE="http://pronet-edge.cfapps.io/zuul/";
         constant.PROFILE_BASIC_APP_URL_BASE="http://pronet-edge.cfapps.io/zuul/";
         constant.TESTSUITE_BASIC_APP_URL_BASE="http://localhost:8095/testSuite";
+        constant.TESTCASE_BASIC_APP_URL_BASE="http://localhost:8095/testCase";
     }
     
 })();

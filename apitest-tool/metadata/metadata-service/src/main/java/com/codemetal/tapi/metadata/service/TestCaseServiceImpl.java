@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.codemetal.tapi.metadata.TestCaseDetails;
+import com.codemetal.tapi.metadata.TestSuite;
 import com.codemetal.tapi.metadata.repository.TestCaseRepository;
 import com.codemetal.tapi.metadata.service.TestCaseService;
 /**
@@ -38,9 +39,9 @@ public class TestCaseServiceImpl implements TestCaseService{
 	@Override
 	public List<TestCaseDetails> getTestCases() {
 		
-		//testCaseRepository.findAll().forEachRemaining(list::add); 
+		return (List<TestCaseDetails>)testCaseRepository.findAll(); 
 
-		return null;
+		
 	}
 
 }

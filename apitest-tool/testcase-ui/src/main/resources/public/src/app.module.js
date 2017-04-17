@@ -12,17 +12,27 @@ myapp.config(function($stateProvider, $urlRouterProvider) {
         .state('login', {
             //  Posts state. This state will contain nested views
             url: '/viewTestSuiteList',
-            templateUrl: 'src/modules/views/viewTestSuiteList.html'
+            templateUrl: 'src/modules/views/viewTestCaseList.html'
         })
         .state('viewTestSuite', {
             //  Posts state. This state will contain nested views
             url: '/viewTestSuite',
-            templateUrl: 'src/modules/views/viewTestSuiteList.html'
+            templateUrl: 'src/modules/views/viewTestCaseList.html'
+        })
+        .state('viewTestCase', {
+            //  Posts state. This state will contain nested views
+            url: '/viewTestCase',
+            templateUrl: 'src/modules/views/viewTestCaseList.html'
         })
 	    .state('createTestSuite', {
 	        //  Posts state. This state will contain nested views
 	        url: '/createTestSuite',
 	        templateUrl: 'src/modules/views/createTestSuite.html'
+	    })
+	    .state('createTestCase', {
+	        //  Posts state. This state will contain nested views
+	        url: '/createTestCase',
+	        templateUrl: 'src/modules/views/createTestCase.html'
 	    });
 
 

@@ -15,7 +15,9 @@
             login:login,
             searchContact: searchContact,
             createTestSuiteData: createTestSuiteData,
-            getAllTestSuites: getAllTestSuites
+            getAllTestSuites: getAllTestSuites,
+            createTestCaseData: createTestCaseData,
+            getAllTestCases: getAllTestCases
         };
 
         function getUserProfileByUserId(userId){
@@ -45,8 +47,16 @@
         	return RestHelper.post("",ProfileConstant.TESTSUITE_BASIC_APP_URL_BASE,data)
         }
         
+        function createTestCaseData(data){
+        	return RestHelper.post("",ProfileConstant.TESTCASE_BASIC_APP_URL_BASE,data)
+        }
+        
         function getAllTestSuites(){
         	return RestHelper.get("",ProfileConstant.TESTSUITE_BASIC_APP_URL_BASE + "/list")
+        }
+        
+        function getAllTestCases(){
+        	return RestHelper.get("",ProfileConstant.TESTCASE_BASIC_APP_URL_BASE + "/list")
         }
 
 

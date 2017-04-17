@@ -33,8 +33,14 @@
         model.newTestSuiteModel = function () {
         	return {
         		"name": ""
-        	}
-        }
+        	};
+        };
+        
+        model.newTestCaseModel = function () {
+        	return {
+        		"scenarioName": ""
+        	};
+        };
 
     }
 

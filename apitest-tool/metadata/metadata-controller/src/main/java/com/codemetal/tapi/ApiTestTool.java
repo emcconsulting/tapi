@@ -15,7 +15,8 @@ import com.codemetal.tapi.metadata.service.TestSuiteServiceImpl;
         "com.codemetal.tapi.metadata.controller",
         "com.codemetal.tapi.metadata.service",
         "com.codemetal.tapi.metadata.repository"
-}
+}, 
+scanBasePackageClasses = {RestExceptionProcessor.class}
 
         )
 

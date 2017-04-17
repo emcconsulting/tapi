@@ -20,13 +20,18 @@ public class TestCaseServiceImpl implements TestCaseService{
 	@Autowired
 	TestCaseRepository testCaseRepository;
 	
+	@Autowired
+	TestCaseValidator testCaseValidator;
+	
 	@Override
 	public TestCaseDetails createTestCase(TestCaseDetails testCase) {
+		testCaseValidator.validateTestCase(testCase);
 		return testCaseRepository.save(testCase);
 	}
 
 	@Override
 	public TestCaseDetails updateTestcase(TestCaseDetails testCase) {
+		testCaseValidator.validateTestCase(testCase);
 		return testCaseRepository.save(testCase);
 	}
 

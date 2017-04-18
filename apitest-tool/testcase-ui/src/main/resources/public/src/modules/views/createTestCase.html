@@ -6,14 +6,34 @@
   <div class="panel-body">
   <div ng-controller="TestCaseController">
 			<form name = "testsuite-ui">
-				<div>Name: <input type="text" ng-model="name"></div>	
+				<div>Name: <input type="text" ng-model="name"></div>
+				
 				<br>
+				
+				<div>
+				Description:
+				<br>
+				<textarea rows="4" cols="50" name="description" ng-model="description">
+				</textarea>	
+				</div>
+				<br>
+				
+				<div>endpoint URI: <input type="text" ng-model="endPointURI"></div>
+				
+				<br>
+				
+				<div>endpoint Host: <input type="text" ng-model="endPointHost"></div>
+				
+				<br>
+				
+				<div>endpoint Port: <input type="text" ng-model="endPointPort"></div>
+				
 				
 				<br>
 				<!-- <button type = "button" class="btn btn-primary" ng-click = "createTestSuite()">Create TestSuite</button> -->
 				<button type="button" class="btn btn-primary" ng-click = "saveTestCase()">Save</button>
 				<button type="button" class="btn btn-primary" ng-click = "testCaseList()">Cancel</button>
-	<!-- 			<button type = "button" class="btn btn-primary" ng-click = "testSuiteList()">View TestSuites</button> -->
+
 			</form>
 		</div>
    </div>

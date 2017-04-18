@@ -50,6 +50,10 @@
         
         $scope.saveTestCase = function () {
        	 $scope.testCaseModel.scenarioName = $scope.name;
+       	 $scope.testCaseModel.scenarioDescription = $scope.description;
+       	$scope.testCaseModel.endPointURI = $scope.endPointURI;
+       	$scope.testCaseModel.endPointHost = $scope.endPointHost;
+       	$scope.testCaseModel.endPointPort = $scope.endPointPort;
        	TestCaseBasicFactory.createTestCaseData($scope.testCaseModel).then(success, error);
             function success(response) {
             	reset();

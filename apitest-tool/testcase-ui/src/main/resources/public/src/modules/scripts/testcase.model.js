@@ -14,7 +14,12 @@
         
         model.newTestCaseModel = function () {
         	return {
-        		"scenarioName": ""
+        		"scenarioName": "",
+        		"scenarioDescription": "",
+        		"endPointURI": "",
+        		"endPointHost": "",
+        		"endPointPort": "",
+        	
         	};
         };
 

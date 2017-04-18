@@ -8,9 +8,26 @@
    <button type="button" class="btn btn-primary" ng-click = "createTestCase()">Create TestCase</button>
 	<br>  
     <br>
-    <ul ng-repeat="testcase in testCasesList">
+    
+    <table class="table table-striped">
+	     <tr>
+		    <th>Name</th>
+		    <th>Description</th>
+		    <th>endpoint URI</th>
+		    <th>endpoint Host</th>
+		    <th>endpoint Port</th>
+	     </tr>
+  		<tr ng-repeat="testcase in testCasesList">
+	    <td>{{ testcase.scenarioName }}</td>
+	    <td>{{ testcase.scenarioDescription }}</td>
+	    <td>{{ testcase.endPointURI }}</td>
+	    <td>{{ testcase.endPointHost }}</td>
+	    <td>{{ testcase.endPointPort }}</td>
+	  	</tr>
+	</table>
+    <!-- <ul ng-repeat="testcase in testCasesList">
 	    <li>{{ testcase.scenarioName }}</li>
-	</ul>
+	</ul> -->
     	
   </div>
   

@@ -6,12 +6,12 @@ angular.module('app.tapi', []);
 
 myapp.config(function($stateProvider, $urlRouterProvider) {
 
-    $urlRouterProvider.otherwise('/viewTestSuiteList');
+    $urlRouterProvider.otherwise('/viewTestCaseList');
     $stateProvider
 
         .state('login', {
             //  Posts state. This state will contain nested views
-            url: '/viewTestSuiteList',
+            url: '/viewTestCaseList',
             templateUrl: 'src/modules/views/viewTestCaseList.html'
         })
         .state('viewTestSuite', {

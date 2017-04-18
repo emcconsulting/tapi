@@ -2,63 +2,29 @@
  * Created by bhandr1 on 5/14/2016.
  */
 (function () {
-    angular.module('app.tapi').factory('ProfileBasicFactory',ProfileBasicFactory);
+    angular.module('app.tapi').factory('TestSuiteBasicFactory',TestSuiteBasicFactory);
 
-    ProfileBasicFactory.$inject = ["RestHelper","ProfileConstant"];
+    TestSuiteBasicFactory.$inject = ["RestHelper","TestSuiteConstant"];
 
-    function ProfileBasicFactory(RestHelper,ProfileConstant) {
+    function TestSuiteBasicFactory(RestHelper,TestSuiteConstant) {
 
         return {
-            createUserProfile: createUserProfile,
-            getUserProfileByUserId: getUserProfileByUserId,
-			updateUserProfile: updateUserProfile,
-            login:login,
-            searchContact: searchContact,
             createTestSuiteData: createTestSuiteData,
-            getAllTestSuites: getAllTestSuites,
-            createTestCaseData: createTestCaseData,
-            getAllTestCases: getAllTestCases
+            getAllTestSuites: getAllTestSuites
+         
         };
 
-        function getUserProfileByUserId(userId){
-            //TODO, configure the url and service param, userID
-            return RestHelper.get("",ProfileConstant.PROFILE_BASIC_APP_URL_BASE+ "api/profile/basic/byUserId?userId="+userId);
-        }
-
-        function createUserProfile(data,userId){
-            return RestHelper.post("",ProfileConstant.PROFILE_BASIC_APP_URL_BASE+ "api/profile/basic",data);
-        }
-        
-        function updateUserProfile(data){
-            //TODO, configure the url and service param, userID
-            return RestHelper.put("",ProfileConstant.PROFILE_BASIC_APP_URL_BASE+ "api/profile/basic",data);
-        }
-        function login(data){
-            //TODO, configure the url and service param, userID
-            return RestHelper.post("",ProfileConstant.PROFILE_BASIC_APP_URL_BASE+ "api/profile/basic/login",data);
-        }
-
-        function searchContact(data){
-            //TODO, configure the url and service param, userID
-            return RestHelper.get("",ProfileConstant.PROFILE_BASIC_APP_URL_BASE+ "api/profile/basic/search?name="+data);
-        }
-        
+       
         function createTestSuiteData(data){
-        	return RestHelper.post("",ProfileConstant.TESTSUITE_BASIC_APP_URL_BASE,data)
+        	return RestHelper.post("",TestSuiteConstant.TESTSUITE_BASIC_APP_URL_BASE,data)
         }
         
-        function createTestCaseData(data){
-        	return RestHelper.post("",ProfileConstant.TESTCASE_BASIC_APP_URL_BASE,data)
-        }
-        
+       
         function getAllTestSuites(){
-        	return RestHelper.get("",ProfileConstant.TESTSUITE_BASIC_APP_URL_BASE + "/list")
+        	return RestHelper.get("",TestSuiteConstant.TESTSUITE_BASIC_APP_URL_BASE + "/list")
         }
         
-        function getAllTestCases(){
-        	return RestHelper.get("",ProfileConstant.TESTCASE_BASIC_APP_URL_BASE + "/list")
-        }
-
+        
 
     }
 })();

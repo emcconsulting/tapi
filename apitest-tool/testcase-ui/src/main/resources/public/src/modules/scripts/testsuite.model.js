@@ -6,41 +6,18 @@
 
     angular
         .module('app.tapi')
-        .service('ProfileBasicModel', ProfileBasicModel);
+        .service('TestSuiteBasicModel', TestSuiteBasicModel);
 
-    function ProfileBasicModel(){
+    function TestSuiteBasicModel(){
         var model = this;
-        model.newProfileBasicModel = function () {
-            return {
-                "userId": "",
-                "firstName": "",
-				"lastName": "",
-				"email": "",
-				"password": "",
-				"profileSummary": ""
-            };
-        };
-
-        model.newLoginModel = function () {
-            return {
-                "email": "",
-                "password": "",
-                "firstName": "",
-                "lastName": ""
-            };
-        };
-        
+  
         model.newTestSuiteModel = function () {
         	return {
         		"name": ""
         	};
         };
         
-        model.newTestCaseModel = function () {
-        	return {
-        		"scenarioName": ""
-        	};
-        };
+       
 
     }
 

@@ -1,0 +1,18 @@
+ 
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">TestCases</h3>
+  </div>
+  <div class="panel-body">
+  <div ng-controller="TestCaseController">
+   <button type="button" class="btn btn-primary" ng-click = "createTestCase()">Create TestCase</button>
+	<br>  
+    <br>
+    <ul ng-repeat="testcase in testCasesList">
+	    <li>{{ testcase.scenarioName }}</li>
+	</ul>
+    	
+  </div>
+  
+  </div>
+</div>

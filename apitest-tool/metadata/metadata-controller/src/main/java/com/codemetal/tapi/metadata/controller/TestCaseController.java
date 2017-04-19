@@ -105,7 +105,7 @@ public class TestCaseController {
 
 		testCaseDet.setRequestMethod(RequestMethod.GET);
 
-		testCaseDet.setResponseType(MediaType.APPLICATION_JSON);
+		//testCaseDet.setResponseType(MediaType.APPLICATION_JSON);
 
 		TestCaseResult result = new TestCaseResult();
 		result.setResponseStatus(HttpStatus.PROCESSING);

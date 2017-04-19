@@ -47,7 +47,7 @@ public class TestCaseDetails implements Serializable {
 	private RequestMethod requestMethod;
 
 	/* HTTP Response Type for the API */
-	private MediaType responseType;
+	private String responseType;
 
 	/* Request Header for the API */
 	private Header requestHeader;
@@ -107,11 +107,11 @@ public class TestCaseDetails implements Serializable {
 		this.requestMethod = requestMethod;
 	}
 
-	public MediaType getResponseType() {
+	public String getResponseType() {
 		return responseType;
 	}
 
-	public void setResponseType(MediaType responseType) {
+	public void setResponseType(String responseType) {
 		this.responseType = responseType;
 	}
 

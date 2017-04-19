@@ -54,6 +54,8 @@
        	$scope.testCaseModel.endPointURI = $scope.endPointURI;
        	$scope.testCaseModel.endPointHost = $scope.endPointHost;
        	$scope.testCaseModel.endPointPort = $scope.endPointPort;
+       	$scope.testCaseModel.requestMethod = $scope.requestMethod;
+       	$scope.testCaseModel.responseType = $scope.responseType;
        	TestCaseBasicFactory.createTestCaseData($scope.testCaseModel).then(success, error);
             function success(response) {
             	reset();

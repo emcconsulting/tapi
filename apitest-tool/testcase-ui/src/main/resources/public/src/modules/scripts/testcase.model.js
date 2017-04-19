@@ -19,6 +19,8 @@
         		"endPointURI": "",
         		"endPointHost": "",
         		"endPointPort": "",
+        		"requestMethod": "",
+        		"responseType": ""
         	
         	};
         };

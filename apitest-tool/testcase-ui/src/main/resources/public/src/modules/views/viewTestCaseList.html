@@ -3,33 +3,32 @@
   <div class="panel-heading">
     <h3 class="panel-title">TestCases</h3>
   </div>
-  <div class="panel-body">
+<!--   <div class="panel-body"> -->
   <div ng-controller="TestCaseController">
+  <br>
    <button type="button" class="btn btn-primary" ng-click = "createTestCase()">Create TestCase</button>
+   <!-- <button type="button" class="btn">Basic</button> -->
 	<br>  
     <br>
     
-    <table class="table table-striped">
+
+    	
+  </div>
+  
+
+  <div class="panel panel-default">
+  <!-- Default panel contents -->
+<!--   <div class="panel-heading">Panel heading</div> -->
+ 
+    <table class="table table-striped" ng-controller="TestCaseController">
 	     <tr>
 		    <th>Name</th>
 		    <th>Description</th>
-		    <th>endpoint URI</th>
-		    <th>endpoint Host</th>
-		    <th>endpoint Port</th>
 	     </tr>
   		<tr ng-repeat="testcase in testCasesList">
 	    <td>{{ testcase.scenarioName }}</td>
 	    <td>{{ testcase.scenarioDescription }}</td>
-	    <td>{{ testcase.endPointURI }}</td>
-	    <td>{{ testcase.endPointHost }}</td>
-	    <td>{{ testcase.endPointPort }}</td>
 	  	</tr>
 	</table>
-    <!-- <ul ng-repeat="testcase in testCasesList">
-	    <li>{{ testcase.scenarioName }}</li>
-	</ul> -->
-    	
-  </div>
-  
-  </div>
+	</div>
 </div>
